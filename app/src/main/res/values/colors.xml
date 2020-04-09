@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8055C4</color>
+    <color name="colorPrimaryDark">#532AAA</color>
+    <color name="colorAccent">#9A69F4</color>
+    <color name="colorButtonAccent">#9E98D5</color>
+    <color name="colorDashBtns">#FFFFFF</color>
+
+
+
+    <color name="black_overlay">#66000000</color>
+</resources>

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".BookTicketConfirmationActivity">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/etTravelDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_Travel_Date"
+            style="@style/MediumTextSize18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:drawableRight="@drawable/ic_outline_date_range"
+            android:focusable="false"
+            android:hint="Select Travel Date"
+            android:inputType="textPersonName"
+            android:longClickable="false" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvAdult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="26dp"
+        android:text="Adults"
+        android:textColor="#9A69F4"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTravelDate" />
+
+    <TextView
+        android:id="@+id/tvadultPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="( ₹ 500 each)"
+        style="@style/TextViewStyleWithpredefinedParent.Red"
+        app:layout_constraintStart_toEndOf="@+id/tvAdult"
+        app:layout_constraintTop_toBottomOf="@+id/etTravelDate" />
+
+    <Button
+        android:id="@+id/btnMinusAdult"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="16dp"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tvAdult"
+        app:layout_constraintTop_toBottomOf="@+id/etTravelDate" />
+
+    <TextView
+        android:id="@+id/tvAmtAdult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:text="0"
+        style="@style/MediumTextSize18"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnMinusAdult"
+        app:layout_constraintStart_toEndOf="@+id/btnAddAdult"
+        app:layout_constraintTop_toBottomOf="@+id/etTravelDate" />
+
+    <Button
+        android:id="@+id/btnAddAdult"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAdult"
+        app:layout_constraintTop_toBottomOf="@+id/etTravelDate" />
+
+
+
+
+    <TextView
+        android:id="@+id/tvAmtChildren"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="8dp"
+        android:text="0"
+        style="@style/MediumTextSize18"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnMinusAdult"
+        app:layout_constraintStart_toEndOf="@+id/btnAddAdult"
+        app:layout_constraintTop_toBottomOf="@+id/tvAmtAdult" />
+
+    <Button
+        android:id="@+id/btnAddChildren"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAdult"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddAdult" />
+
+    <TextView
+        android:id="@+id/tvChildren"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="35dp"
+        android:text="Children"
+        android:textColor="#9A69F4"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdult" />
+
+    <TextView
+        android:id="@+id/tvChildPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="41dp"
+        android:text="( ₹ 500 each)"
+        style="@style/TextViewStyleWithpredefinedParent.Red"
+        app:layout_constraintStart_toEndOf="@+id/tvChildren"
+        app:layout_constraintTop_toBottomOf="@+id/tvadultPrice" />
+
+
+    <TextView
+        android:id="@+id/tvDescriptionValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="2 - 12 years old"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChildren" />
+
+    <Button
+        android:id="@+id/btnMinusChild"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="16dp"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tvAdult"
+        app:layout_constraintTop_toBottomOf="@+id/btnMinusAdult" />
+
+    <TextView
+        android:id="@+id/tvInfants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="45dp"
+        android:text="Infants"
+        android:textColor="#9A69F4"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChildren" />
+
+    <TextView
+        android:id="@+id/tvInfantsPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="52dp"
+        android:text="( ₹ 500 each)"
+        style="@style/TextViewStyleWithpredefinedParent.Red"
+        app:layout_constraintStart_toEndOf="@+id/tvInfants"
+        app:layout_constraintTop_toBottomOf="@+id/tvChildPrice" />
+
+
+    <TextView
+        android:id="@+id/tvDescription2Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Under 2 years old"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfants" />
+
+    <Button
+        android:id="@+id/btnMinusInfants"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="16dp"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tvAdult"
+        app:layout_constraintTop_toBottomOf="@+id/btnMinusChild" />
+
+    <TextView
+        android:id="@+id/tvAmtInfants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="8dp"
+        android:text="0"
+        style="@style/MediumTextSize18"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnMinusInfants"
+        app:layout_constraintStart_toEndOf="@+id/btnAddInfants"
+        app:layout_constraintTop_toBottomOf="@+id/tvAmtChildren" />
+
+    <Button
+        android:id="@+id/btnAddInfants"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAdult"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddChildren" />
+
+
+    <TextView
+        android:id="@+id/tvNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:text="NOTE : "
+        android:textColor="#FF1A35"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription2Value" />
+
+    <TextView
+        android:id="@+id/tvNoteValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="30dp"
+        android:text="Kindly note that, Pets are not allowed."
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvNote"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription2Value" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/mybutton"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNoteValue" />
+
+    <TextView
+        android:id="@+id/tvTripSummery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="25dp"
+        android:text="Your Trip Summery"
+        android:gravity="center_horizontal"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+
+    <TextView
+        android:id="@+id/tvSummeryValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:text="Under 2 years old"
+        android:gravity="center_horizontal"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTripSummery" />
+
+    <TextView
+        android:id="@+id/tvAmt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:text="Under 2 years old"
+        android:textSize="15sp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSummeryValue" />
+
+    <TextView
+        android:id="@+id/tvAmtValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:text="Under 2 years old"
+        android:gravity="center_horizontal"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAmt" />
+
+        <Button
+            android:id="@+id/btnProceed"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/mybutton"
+            android:text="Proceed To Pay"
+            android:textAllCaps="false"
+
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAmtValue" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
